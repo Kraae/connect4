@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .board {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    
+    transform: translate(-50%);
+    width: 700px;
+    height: 600px;
+    
+    border: solid 3px black;
+    background-color: grey; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+  }
+
+
+  
+  /* pieces are div within game table cells: draw as colored circles */
+  
+  .piece {
+    /* TODO: make into circles */
+    margin: 3px;
+    width: 13%;
+    height: 13%;
+    background-color: white;
+    border:5px black;
+    /*Border-Radius: Squares => Circles*/
+    border-radius: 50%; 
+    outline: 5px black;
+  }
+  
+  /* TODO: make pieces red/blue,  depending on player 1/2 piece */
+  
+  /* column-top is table row of clickable areas for each column */
+  
+  .player-one {
+    background-color: red;
+    border-radius: 10px;
+  }
+  
+  .player-two {
+    background-color: blue;
+    border-radius: 10px;
+  }
+
+ 
