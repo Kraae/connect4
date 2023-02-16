@@ -92,7 +92,7 @@ function makeHtmlBoard() {
     // TODO: write the real version of this, rather than always returning 0
     // Start at the bottom of the column, and step up, checking to make sure
     // each position has been filled. If one hasn't, return the empty position.
-    for(let y = height - 1; y >=0; y--) {
+    for(let y = height - 1; y >= 0; y--) {
         if (!board[y][x]) {
             return y;
         }
@@ -110,7 +110,11 @@ function makeHtmlBoard() {
     piece.style.backgroundColor = currPlayer.color;
     const spot = document.getElementById(`${y}-${x}`);
     spot.append(piece);
-  }
+    //array.forEach.call(div, (piece) => {
+    //    piece.addEventListener('click', changeColor);
+     //   piece.style.backgroundColor = 'white';
+    //})
+ }
 
   
   /** endGame: announce game end */
@@ -161,12 +165,12 @@ function makeHtmlBoard() {
     }// TODO: switch currPlayer 1 <-> 2
   
   togglePlayer() 
-    if (this.currPlayer === this.p1) {
-      pP1.classList.remove("currPlayer");
-      pP2.classList.add("currPlayer");
+    if (currPlayer === p1) {
+      p1.classList.remove("currPlayer");
+      p2.classList.add("currPlayer");
     } else {
-      pP2.classList.remove("currPlayer");
-      pP1.classList.add("currPlayer");
+      p2.classList.remove("currPlayer");
+      p1.classList.add("currPlayer");
     }
   
 }
