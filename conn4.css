@@ -1,13 +1,11 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     text-align: center;
   }
   
   .board {
     position: absolute;
-    top: 4rem;
+    top: 10rem;
     left: 50%;
     
     transform: translate(-50%);
@@ -15,27 +13,26 @@
     height: 600px;
     
     border: solid 3px black;
-    background-color: grey; 
+    background-color:blue; 
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     
   }
-
-
   
   /* pieces are div within game table cells: draw as colored circles */
   
   .piece {
     /* TODO: make into circles */
     margin: 3px;
-    width: 13%;
-    height: 13%;
+    width: 90px;
+    height: 90px;
     background-color: white;
-    border:5px black;
+    border:5px navy;
     /*Border-Radius: Squares => Circles*/
     border-radius: 50%; 
     outline: 5px black;
+    box-shadow:inset 0px 0px 0px 3px rgb(0, 0, 0, .2);
   }
   
   /* TODO: make pieces red/blue,  depending on player 1/2 piece */
@@ -53,3 +50,40 @@
   }
 
  
+  .drop-in {
+    animation-name: drop-in;
+    animation-duration: 500ms;
+  }
+  
+  @keyframes drop-in {
+    from {
+      transform: translateY(-420px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+
+  #winMsg{
+    margin-top: 100px;
+    font-size: 10em;
+    color: gold;
+    text-shadow: 3px 2px 2px rgba(255, 255, 255, 0.5)
+  }
+  
+  .currPlayer {
+    border: 7px solid rgba(255, 217, 0, 0.814);
+    border-radius: 7px;
+    transition: 200ms;
+  }
+ 
+  #column-top td {
+    border: dashed 2px rgb(255, 238, 0);
+  }
+  
+  #column-top td:hover {
+    background-color: gold;
+  }
+  
+
